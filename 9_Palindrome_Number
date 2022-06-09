@@ -1,0 +1,25 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0 || x>=2147483647)  //32 bit unsigned int
+            return false;
+        long int num=0;
+        int y=x; //to check
+        
+        while(x>0)
+        {
+            num=num*10; 
+            if(num>2147483647)
+                return false;
+            
+            num=num+(x%10);  //modulus to get the last digit
+            
+            x=x/10; //to get the remaining
+        }
+        
+        if(num==y)
+            return true;
+        else
+            return false;
+    }
+};
