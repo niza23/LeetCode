@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
+    
         if(x<0 || x>=2147483647)  //32 bit unsigned int
             return false;
         long int num=0;
